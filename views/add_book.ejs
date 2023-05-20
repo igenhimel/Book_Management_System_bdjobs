@@ -1,0 +1,44 @@
+<%- include("layout/header") %>
+
+<div class="container">
+  <h2>Book Details</h2>
+  <form class="form-inline" action="/add" method="post">
+    <div class="form-group">
+      <label for="bookName">Book Name:</label>
+      <input type="text" class="form-control" name="bookName" id="bookName" placeholder="Enter book name">
+    </div>
+    <div class="form-group">
+      <label for="publisherName">Publisher Name:</label>
+      <input type="text" class="form-control" name="publisherName" id="publisherName" placeholder="Enter publisher name">
+    </div>
+    <div class="form-group">
+      <label for="publisherAge">Publisher Age:</label>
+      <input type="number" class="form-control" name="publisherAge" id="publisherAge" placeholder="Enter publisher age">
+    </div>
+    <div class="form-group">
+      <label for="pageNo">Page No:</label>
+      <input type="number" class="form-control" name="pageNo" id="pageNo" placeholder="Enter page number">
+    </div>
+    <div class="form-group">
+      <label for="publisherDate">Publisher Date:</label>
+      <input type="date" name="publisherDate" class="form-control" id="publisherDate">
+    </div>
+    <div class="form-group">
+      <label>Book Type:</label>
+      <div class="form-check">
+        <input class="form-check-input" name="bookType" type="checkbox" value="sci-fi" id="sci-fi">
+        <label class="form-check-label" for="sci-fi">Sci-Fi</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"  name ="bookType" type="checkbox" value="drama" id="drama">
+        <label class="form-check-label" for="drama">Drama</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" name="bookType" type="checkbox" value="novel" id="novel">
+        <label class="form-check-label" for="novel">Novel</label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>
+<%-include("layout/footer")%>

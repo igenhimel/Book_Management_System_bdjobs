@@ -1,0 +1,50 @@
+<%- include('layout/header') %>
+
+<div class="container">
+
+    <% if (message){ %>
+        <div class="alert alert-primary alert-dismissible fade show alert-<%= message.type %>" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  
+            <strong> <%=message.message %></strong>
+        </div>
+
+        <% } %>
+
+
+        <div class="container">
+            <h2>Table with Index, Name, Email, Phone, and Image</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                     <% users.forEach((row,index) => { %>
+                        <tr>
+                            <td><%= index+1 %></td>
+                            <td><%= row.name %></td>
+                            <td><%= row.phone %></td>
+                            <td><%= row.email %></td>
+                            <td><img src="<%= row.image %>" alt="Profile Image" width="50" height="50"></td>
+                        </tr>
+                     <% }) %>;
+                    
+                   
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    
+        
+      
+
+</div>
+
+<%-include('layout/footer')%>
